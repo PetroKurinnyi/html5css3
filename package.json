@@ -1,0 +1,25 @@
+{
+  "name": "html5css3",
+  "version": "1.0.0",
+  "description": "Advanced practice in HTML5 and CSS3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetroKurinnyi/html5css3.git"
+  },
+  "author": "PetroKurinnyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PetroKurinnyi/html5css3/issues"
+  },
+  "homepage": "https://github.com/PetroKurinnyi/html5css3#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-sass": "^4.0.1"
+  }
+}
