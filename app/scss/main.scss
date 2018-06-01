@@ -1,6 +1,107 @@
 @import './variables';
 @import './mixins';
 
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+body,
+ul,
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
 body {
   background-color: $background-color;
+
+  header {
+    background-color: $header-BC;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    nav {
+      float: right;
+      width: 215px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          .active {
+            color: rgba(16, 201, 195, 1);
+          }
+          a {
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 2;
+            letter-spacing: 1.2px;
+            text-align: left;
+            color: #191919;
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    height: 313px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      @include font-set(38px, 500, 2.21, 0.4px);
+    }
+    p {
+      width: 512px;
+      font-family: 'Nunito Sans', sans-serif;
+      @include font-set(18px, normal, 1.56, 0.1px);
+      text-align: center;
+      color: #787878;
+    }
+  }
+
+  main {
+    height: 1026px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    a {
+      display: block;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &:after {
+        @include hover-link(rgba(16, 201, 195, 0.5));
+      }
+      &:before {
+        @include hover-link(url(../img/icon_eye.png) no-repeat center);
+      }
+      &:hover:before,
+      &:hover:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  footer {
+    height: 200px;
+    background: $footer-BC;
+  }
 }
