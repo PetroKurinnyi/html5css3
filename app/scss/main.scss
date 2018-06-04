@@ -159,16 +159,13 @@ body {
     footer {
       height: 285px;
       .container {
-        height: 100%;
         grid-gap: 0;
       }
-      @include font-set(15px, normal, 1.6, 0.1px);
       .rights {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 5;
         .company-name {
           padding-top: 30px;
-          @include font-set(18px, 500, 2, 0.2px);
         }
       }
       .contacts {
@@ -178,12 +175,12 @@ body {
         grid-row: 2;
       }
       .footer-nav {
-        padding-top: 35px;
+        padding-top: 50px;
         grid-column-start: 6;
         grid-column-end: 9;
       }
       .social {
-        padding-top: 35px;
+        padding-top: 50px;
         grid-column-start: 10;
         grid-column-end: 12;
       }
@@ -213,9 +210,6 @@ body {
     footer {
       height: 385px;
       .container {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
         grid-gap: 0;
       }
       @include font-set(12px, normal, 1.6, 0.1px);
