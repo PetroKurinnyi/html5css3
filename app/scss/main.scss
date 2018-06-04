@@ -101,7 +101,52 @@ body {
   }
 
   footer {
-    height: 200px;
+    height: 285px;
     background: $footer-BC;
+    color: #bcbcbc;
+    a {
+      text-decoration: none;
+      color: #bcbcbc;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 30px;
+    }
+    @include font-set(15px, normal, 1.6, 0.1px);
+    .rights {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      .company-name {
+        padding-top: 80px;
+        @include font-set(18px, 500, 4, 0.2px);
+        color: #ffffff;
+      }
+    }
+    .contacts {
+      padding-top: 100px;
+      grid-column-start: 6;
+      grid-column-end: 8;
+    }
+    .footer-nav {
+      padding-top: 100px;
+      grid-column-start: 9;
+      grid-column-end: 11;
+      ul {
+        columns: 2;
+        li:nth-last-child(-n + 4) {
+          margin-left: 30px;
+        }
+      }
+    }
+    .social {
+      padding-top: 100px;
+      grid-column-start: 12;
+      grid-column-end: 12;
+    }
   }
 }
