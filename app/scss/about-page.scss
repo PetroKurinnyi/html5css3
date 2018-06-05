@@ -1,0 +1,60 @@
+body {
+  .banner {
+    height: 350px;
+    background: url(../img/scarl.jpg) no-repeat center center fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      z-index: 1;
+      @include font-set(38px, 500, 1.26, 0.4px);
+    }
+    p {
+      z-index: 1;
+      width: 512px;
+      text-align: center;
+      font-family: 'Nunito Sans', sans-serif;
+      @include font-set(18px, normal, 1.56, 0.1px);
+    }
+  }
+
+  .numbers {
+    height: 240px;
+    background-color: $main-thame-color;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      div.number {
+        align-items: center;
+        color: #ffffff;
+        display: grid;
+        grid-template-columns: 60px auto;
+        img {
+          height: 40px;
+          width: 40px;
+        }
+        h2 {
+          @include font-set(18px, 500, 1.67, 0.5px);
+        }
+        p {
+          text-transform: uppercase;
+          @include font-set(12px, 500, 1.5, 1.2px);
+        }
+      }
+    }
+  }
+}
