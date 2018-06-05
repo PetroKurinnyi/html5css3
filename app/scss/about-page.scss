@@ -57,4 +57,66 @@ body {
       }
     }
   }
+  main.about {
+    height: 570px;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 570px;
+    div {
+      background: url(../img/poster.jpg) no-repeat center;
+      background-size: cover;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 86px;
+      margin-right: 143px;
+      h2 {
+        @include font-set(30px, 500, 2.8, 0.3px);
+      }
+      p {
+        font-family: 'Nunito Sans', sans-serif;
+        @include font-set(16px, normal, 1.5, 0.1px);
+        color: #787878;
+        &:last-of-type {
+          margin-top: 35px;
+        }
+      }
+      #signature {
+        margin-top: 37px;
+        width: 223px;
+      }
+    }
+  }
+
+  section.need-project {
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      @include font-set(30px, 500, 2.8, 0.3px);
+      color: #1d1d1d;
+    }
+    p {
+      width: 530px;
+      font-family: 'Nunito Sans', sans-serif;
+      @include font-set(16px, normal, 1.5, 0.1px);
+      text-align: center;
+    }
+    button {
+      @include font-set(12px, 500, 1, 1.2px);
+      height: 55px;
+      width: 180px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: $main-thame-color;
+      border-width: 0px;
+      margin-top: 40px;
+    }
+  }
 }
