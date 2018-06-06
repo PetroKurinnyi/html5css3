@@ -1,0 +1,199 @@
+body {
+  .banner {
+    height: 350px;
+    background: url(../img/scarl.jpg) no-repeat center center fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      z-index: 1;
+      @include font-set(38px, 500, 1.26, 0.4px);
+    }
+    p {
+      z-index: 1;
+      width: 512px;
+      text-align: center;
+      font-family: 'Nunito Sans', sans-serif;
+      @include font-set(18px, normal, 1.56, 0.1px);
+    }
+  }
+
+  .numbers {
+    background-color: $main-thame-color;
+    .container {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      div.number {
+        margin: 100px 0 100px 0;
+        align-items: center;
+        color: #ffffff;
+        display: grid;
+        grid-template-columns: 60px auto;
+        img {
+          height: 40px;
+          width: 40px;
+        }
+        h2 {
+          @include font-set(18px, 500, 1.67, 0.5px);
+        }
+        p {
+          text-transform: uppercase;
+          @include font-set(12px, 500, 1.5, 1.2px);
+        }
+      }
+    }
+  }
+  main.about {
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 570px;
+    div {
+      background: url(../img/poster.jpg) no-repeat center;
+      background-size: cover;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 86px 0 143px;
+      h2 {
+        @include font-set(30px, 500, 2.8, 0.3px);
+      }
+      p {
+        font-family: 'Nunito Sans', sans-serif;
+        @include font-set(16px, normal, 1.5, 0.1px);
+        color: #787878;
+        &:last-of-type {
+          margin-top: 35px;
+        }
+      }
+      #signature {
+        margin-top: 37px;
+        width: 223px;
+      }
+    }
+  }
+
+  section.need-project {
+    height: 400px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      @include font-set(30px, 500, 2.8, 0.3px);
+      color: #1d1d1d;
+    }
+    p {
+      width: 530px;
+      font-family: 'Nunito Sans', sans-serif;
+      @include font-set(16px, normal, 1.5, 0.1px);
+      text-align: center;
+    }
+    button {
+      @include font-set(12px, 500, 1, 1.2px);
+      height: 55px;
+      width: 180px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: $main-thame-color;
+      border-width: 0px;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  body {
+    .numbers {
+      .container {
+        div.number {
+          margin: 50px 0 50px 0;
+        }
+      }
+    }
+    main.about {
+      grid-template-columns: 100%;
+      grid-template-rows: 570px 570px;
+      div {
+        grid-row: 2;
+      }
+      article {
+        grid-row: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    .banner {
+      p {
+        width: 90%;
+      }
+    }
+    .numbers {
+      .container {
+        div.number {
+          margin: 35px 0 35px 0;
+        }
+      }
+    }
+    main.about {
+      grid-template-columns: 100%;
+      grid-template-rows: 570px 570px;
+      div {
+        grid-row: 2;
+      }
+      article {
+        margin: 0 30px 0 20px;
+        grid-row: 1;
+      }
+    }
+    section.need-project {
+      height: 400px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        @include font-set(30px, 500, 2.8, 0.3px);
+        color: #1d1d1d;
+      }
+      p {
+        width: 90%;
+        font-family: 'Nunito Sans', sans-serif;
+        @include font-set(16px, normal, 1.5, 0.1px);
+        text-align: center;
+      }
+      button {
+        @include font-set(12px, 500, 1, 1.2px);
+        height: 55px;
+        width: 180px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $main-thame-color;
+        border-width: 0px;
+        margin-top: 40px;
+      }
+    }
+  }
+}
