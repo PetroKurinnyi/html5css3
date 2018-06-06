@@ -1,0 +1,80 @@
+body {
+  main.contact {
+    .container {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      grid-template-rows: 600px;
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+          color: #171717;
+          @include font-set(30px, 500, 2.8, 0.3px);
+        }
+        & > p {
+          width: 90%;
+          font-family: 'Nunito Sans', sans-serif;
+          @include font-set(16px, normal, 1.5, 0.1px);
+          color: #787878;
+        }
+        div {
+          margin-top: 35px;
+          margin-bottom: 50px;
+          p {
+            strong {
+              color: #171717;
+            }
+            font-family: 'Nunito Sans', sans-serif;
+            @include font-set(16px, normal, 2.25, 0.1px);
+            color: #787878;
+          }
+        }
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input {
+          margin-top: 30px;
+          display: block;
+          width: calc(100% - 40px);
+          padding: 20px;
+          border: none;
+        }
+        textarea {
+          width: calc(100% - 40px);
+          height: 130px;
+          margin-top: 30px;
+          display: block;
+          padding: 20px;
+          outline: none;
+          resize: none;
+          overflow: auto;
+          border: none;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          input {
+            width: 41.5%;
+            display: block;
+            &:first-of-type {
+              margin-right: 30px;
+            }
+          }
+        }
+        button {
+          @include font-set(12px, 500, 1, 1.2px);
+          height: 55px;
+          width: 180px;
+          color: #fff;
+          text-transform: uppercase;
+          background-color: $main-thame-color;
+          border-width: 0px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
