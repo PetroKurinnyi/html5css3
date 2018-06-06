@@ -1,0 +1,79 @@
+body {
+  main.project {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 570px;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 14%;
+      h2 {
+        color: #171717;
+        @include font-set(38px, 500, 2.21, 0.4px);
+      }
+      & > p {
+        width: 90%;
+        font-family: 'Nunito Sans', sans-serif;
+        @include font-set(16px, normal, 1.5, 0.1px);
+        color: #787878;
+        &:last-of-type {
+          margin-top: 35px;
+        }
+      }
+      div {
+        margin-top: 60px;
+        p {
+          strong {
+            color: #171717;
+          }
+          font-family: 'Nunito Sans', sans-serif;
+          @include font-set(16px, normal, 1.88, 0.1px);
+          color: #787878;
+        }
+      }
+    }
+    div.poster {
+      background: url(../img/breackfast.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  nav.project-nav {
+    background-color: #fff;
+    height: 100px;
+    & > .container {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      #previous-project,
+      #menu,
+      #next-project {
+        display: block;
+        width: 170px;
+        text-decoration: none;
+        font-size: 12px;
+        @include font-set(12px, 500, 1, 1.2px);
+        color: #1d1d1d;
+        text-transform: uppercase;
+        background-color: #fff;
+        border-width: 0px;
+      }
+      #previous-project {
+        i {
+          margin-right: 13px;
+        }
+      }
+      #menu {
+        text-align: center;
+      }
+      #next-project {
+        text-align: right;
+        i {
+          margin-left: 13px;
+        }
+      }
+    }
+  }
+}

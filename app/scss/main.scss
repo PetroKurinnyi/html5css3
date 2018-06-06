@@ -1,5 +1,6 @@
 @import './variables';
 @import './mixins';
+@import './project-single';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,8 @@
 body,
 ul,
 p,
-h1 {
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
