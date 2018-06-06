@@ -1,6 +1,7 @@
 @import './variables';
 @import './mixins';
 @import './contact';
+@import './about-page';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -46,7 +47,7 @@ body {
         justify-content: space-between;
         li {
           .active {
-            color: rgba(16, 201, 195, 1);
+            color: $main-thame-color;
           }
           a {
             text-decoration: none;
