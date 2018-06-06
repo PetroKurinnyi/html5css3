@@ -77,4 +77,12 @@ body {
       }
     }
   }
+  section.contact-map {
+    .container {
+      #map {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
 }
