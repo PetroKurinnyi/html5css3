@@ -88,3 +88,23 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 640px) {
+  body {
+    main.contact {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 500px 500px;
+        .contact-info {
+          grid-row: 1;
+        }
+        .contact-form {
+          grid-row: 2;
+        }
+      }
+    }
+    section.contact-map {
+      margin-top: 40px;
+    }
+  }
+}
