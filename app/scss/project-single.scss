@@ -34,7 +34,7 @@ body {
       }
     }
     div.poster {
-      background: url(../img/breackfast.jpg) no-repeat center;
+      background: url(../img/breakfast.jpg) no-repeat center;
       background-size: cover;
     }
   }
@@ -72,6 +72,64 @@ body {
         text-align: right;
         i {
           margin-left: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 960px) {
+  body {
+    main.project {
+      grid-template-columns: 100%;
+      grid-template-rows: 570px 570px;
+      div {
+        grid-row: 1;
+      }
+      article {
+        grid-row: 2;
+        width: 86%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 640px) {
+  body {
+    main.project {
+      grid-template-columns: 100%;
+      grid-template-rows: 570px 570px;
+      div {
+        grid-row: 1;
+      }
+      article {
+        grid-row: 2;
+        width: 86%;
+        margin: 0 auto;
+        h2 {
+          @include font-set(30px, 500, 1.51, 0.4px);
+        }
+        & > p {
+          &:last-of-type {
+            margin-top: 20px;
+          }
+        }
+        div {
+          margin-top: 30px;
+        }
+      }
+    }
+    nav.project-nav {
+      & > .container {
+        #previous-project,
+        #menu,
+        #next-project {
+          span {
+            display: none;
+          }
+          i {
+            font-size: 2em;
+          }
         }
       }
     }
