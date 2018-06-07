@@ -31,7 +31,7 @@ body {
   }
 
   .numbers {
-    background-color: $main-thame-color;
+    background-color: $main-theme-color;
     .container {
       flex-wrap: wrap;
       display: flex;
@@ -113,7 +113,7 @@ body {
       width: 180px;
       color: #fff;
       text-transform: uppercase;
-      background-color: $main-thame-color;
+      background-color: $main-theme-color;
       border-width: 0px;
       margin-top: 40px;
     }
@@ -190,7 +190,7 @@ body {
         width: 180px;
         color: #fff;
         text-transform: uppercase;
-        background-color: $main-thame-color;
+        background-color: $main-theme-color;
         border-width: 0px;
         margin-top: 40px;
       }

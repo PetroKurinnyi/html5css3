@@ -1,5 +1,6 @@
 @import './variables';
 @import './mixins';
+@import './project-single';
 @import './contact';
 @import './about-page';
 
@@ -47,7 +48,7 @@ body {
         justify-content: space-between;
         li {
           .active {
-            color: $main-thame-color;
+            color: $main-theme-color;
           }
           a {
             text-decoration: none;
