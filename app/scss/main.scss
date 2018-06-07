@@ -1,6 +1,8 @@
 @import './variables';
 @import './mixins';
 @import './project-single';
+@import './contact';
+@import './about-page';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -15,7 +17,11 @@ body,
 ul,
 p,
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -42,7 +48,7 @@ body {
         justify-content: space-between;
         li {
           .active {
-            color: rgba(16, 201, 195, 1);
+            color: $main-theme-color;
           }
           a {
             text-decoration: none;
@@ -76,7 +82,7 @@ body {
     }
   }
 
-  main {
+  main.work {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -154,7 +160,7 @@ body {
 
 @media only screen and (min-width: 640px) and (max-width: 960px) {
   body {
-    main {
+    main.work {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(4, 1fr);
     }
@@ -204,7 +210,7 @@ body {
         @include font-set(16px, normal, 1.56, 0.1px);
       }
     }
-    main {
+    main.work {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(6, 1fr);
     }

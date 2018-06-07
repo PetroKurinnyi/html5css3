@@ -18,11 +18,13 @@ gulp.task(
     browserSync.init({
       server: {
         baseDir: './app'
-      }
+      },
+      notify: false
     });
 
     gulp.watch('app/scss/*.scss', gulp.series('sass')).on('change', reload);
     gulp.watch('app/*.html').on('change', reload);
+    gulp.watch('app/js/**/*.js').on('change', reload);
   })
 );
 
