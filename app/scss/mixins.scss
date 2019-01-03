@@ -9,7 +9,6 @@
   line-height: $line-height;
   letter-spacing: $letter-spacing;
 }
-
 @mixin hover-link($background) {
   content: '';
   position: absolute;
@@ -18,5 +17,6 @@
   right: 0;
   bottom: 0;
   background: $background;
+  background-size: 50px;
   opacity: 0;
 }

@@ -3,6 +3,7 @@
 @import './project-single';
 @import './contact';
 @import './about-page';
+@import './one-page';
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -51,6 +52,7 @@ body {
             color: $main-theme-color;
           }
           a {
+            text-transform: uppercase;
             text-decoration: none;
             font-size: 12px;
             font-weight: 500;
@@ -95,10 +97,10 @@ body {
         height: 100%;
       }
       &:after {
-        @include hover-link(rgba(16, 201, 195, 0.5));
+        @include hover-link(url(../img/icon_eye.png) no-repeat center);
       }
       &:before {
-        @include hover-link(url(../img/icon_eye.png) no-repeat center);
+        @include hover-link(rgba(16, 201, 195, 0.5));
       }
       &:hover:before,
       &:hover:after {
@@ -145,8 +147,8 @@ body {
       grid-column-end: 11;
       ul {
         columns: 2;
-        li:nth-last-child(-n + 4) {
-          margin-left: 30px;
+        li {
+          display: block;
         }
       }
     }
