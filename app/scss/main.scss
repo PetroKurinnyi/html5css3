@@ -147,8 +147,8 @@ body {
       grid-column-end: 11;
       ul {
         columns: 2;
-        li:nth-last-child(-n + 4) {
-          margin-left: 30px;
+        li {
+          display: block;
         }
       }
     }
